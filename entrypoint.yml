@@ -121,7 +121,7 @@
       chdir: /tmp
     when: not file_data.stat.exists
   
-  - community.vmware.vmware_deploy_ovf:
+  - vmware_deploy_ovf:
       hostname: "{{ vc_server }}"
       username: "{{ vc_username }}"
       password: "{{ vc_password }}"
@@ -131,7 +131,7 @@
       name: centos7_base
       networks: "{u'mgmt':u'{{ vcenter_network }}'}"
       power_on: no
-      validate_certs: False
+      validate_certs: no
       ovf: /tmp/centos7_base/centos7_base.ovf
     delegate_to: localhost
   

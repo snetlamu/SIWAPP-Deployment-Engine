@@ -131,7 +131,7 @@
       name: centos7_base
       networks: "{u'mgmt':u'{{ vcenter_network }}'}"
       power_on: no
-      validate_certs: false
+      #validate_certs: false
       ovf: /tmp/centos7_base/centos7_base.ovf
     delegate_to: localhost
   
